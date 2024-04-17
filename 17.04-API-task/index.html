@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         .details{
+             width: 100%;
+             display: flex;
+             justify-content: center ;
+             padding: 100px 0;
+         }
+         header {
+     background-color: #000;
+     padding: 20px 0;
+ }
+ *, ::after, ::before {
+     box-sizing: border-box;
+ }
+ user agent stylesheet
+ header {
+     display: block;
+     unicode-bidi: isolate;
+ }
+ body {
+     margin: 0;
+     font-family: var(--bs-font-sans-serif);
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1.5;
+     color: #212529;
+     background-color: #fff;
+     -webkit-text-size-adjust: 100%;
+     -webkit-tap-highlight-color: transparent;
+ }
+ a{
+    text-decoration: none;
+    color: white;
+ }
+ ul{
+    list-style-type: none;
+ }
+ .loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: black #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.spinner{
+    width: 100%;
+    margin: 0 auto;
+}
+    
+     </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="header d-flex justify-content-between align-items-center">
+            <h1 class="logo text-white">Suppliers</h1>
+            <nav>
+              <ul class="d-flex gap-5 m-0">
+                <li><a href="/suppliers">Suppliers Lists</a></li>
+                <li><a href="/suppliers-form">Add or Update Supplier</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <main>
+        <div class="spinner my-5 d-none justify-content-center">
+
+            <span class="loader"></span>
+        </div>
+        <table class="table table-dark">
+            <thead>
+                <th>ID</th>
+                <th>Company Name</th>
+                <th>Street</th>
+                <th>Phone</th>
+                <th>City,Country</th>
+                <th>Details</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </thead>
+            <tbody  class="tbody">
+              
+            </tbody>
+          </table>
+          
+    </main>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
