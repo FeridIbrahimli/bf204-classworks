@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+main {
+    padding-top: 170px;
+}
+.card{
+    background-color: black;
+    width: 100%;
+}
+.card h3{
+    color: white;
+}
+hr{
+    color: white;
+}
+.card-image {
+    height: 300px;
+    overflow: hidden;
+
+}
+.trailer{
+    border: 2px solid white;
+    color: white;
+}
+.age{
+    padding: 6px 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: red;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top center;
+    transition: .3s linear;
+}
+.card:hover img {
+    transform: scale(1.1);
+}
